@@ -5,7 +5,7 @@ GROUP BY 2;
 
 -- frequent names
 SELECT 'names',
-WHERE SUM('Occurence') > 1500000
+HAVING SUM('Occurence') > 1500000
 FROM nametable;
 
 -- names per gender
