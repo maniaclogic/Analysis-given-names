@@ -9,11 +9,11 @@ HAVING SUM('Occurence') > 1500000
 FROM nametable;
 
 -- names per gender
-SELECT 'names',
+SELECT 'names'
 WHERE 'Gender' = 'F'
 FROM nametable;
 
-SELECT 'names',
+SELECT 'names'
 WHERE 'Gender' = 'M'
 FROM nametable;
 
@@ -38,4 +38,8 @@ SELECT COUNT('names'), 'year'
 FROM nametable
 GROUP BY 4;
 
+-- Finding the 10 longest names
 SELECT 'names'
+FROM nametable
+ORDER BY SUM(datalength('names')) DESC
+LIMIT 10;
